@@ -1,0 +1,9 @@
+spring:
+    data:
+        mongodb:
+            database: usersdb
+            uri: mongodb+srv://pablovpmadrid:Marx1230@cluster0.q8xteea.mongodb.net/test
+            auto-index-creation: true
+springdoc:
+    swagger-ui:
+        path: /swagger-ui.html
