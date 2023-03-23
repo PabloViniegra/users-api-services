@@ -18,12 +18,15 @@ import java.util.Optional;
 @Service
 public class UsersService {
 
-    @Autowired
+
     private UsersRepository usersRepository;
-    @Autowired
+
     private MongoTemplate template;
-
-
+    @Autowired
+    public UsersService(UsersRepository usersRepository, MongoTemplate template) {
+        this.usersRepository = usersRepository;
+        this.template = template;
+    }
     public List<Users> getUsers() {
         return usersRepository.findAll();
     }

@@ -2,6 +2,7 @@ package com.users.usersapiservices.controllers;
 
 import com.users.usersapiservices.entities.Users;
 import com.users.usersapiservices.services.UsersService;
+import lombok.AllArgsConstructor;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,9 +16,14 @@ import java.util.Optional;
 @RestController
 @CrossOrigin
 @RequestMapping("/users")
+
 public class UsersController {
-    @Autowired
+
     private UsersService usersService;
+    @Autowired
+    public UsersController(UsersService service) {
+        usersService = service;
+    }
     @GetMapping()
     public ResponseEntity<List<Users>> getUsers() {
         var users = usersService.getUsers();
