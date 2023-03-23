@@ -2,7 +2,7 @@ spring:
     data:
         mongodb:
             database: usersdb
-            uri: mongodb+srv://pablovpmadrid:Marx1230@cluster0.q8xteea.mongodb.net/?retryWrites=true&w=majority
+            uri: mongodb://pablovpmadrid:Marx1230@ac-3br0cix-shard-00-00.q8xteea.mongodb.net:27017,ac-3br0cix-shard-00-01.q8xteea.mongodb.net:27017,ac-3br0cix-shard-00-02.q8xteea.mongodb.net:27017/?ssl=true&replicaSet=atlas-qbure6-shard-0&authSource=admin&retryWrites=true&w=majority
             auto-index-creation: true
 springdoc:
     swagger-ui:
