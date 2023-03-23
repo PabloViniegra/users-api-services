@@ -2,9 +2,8 @@ spring:
     data:
         mongodb:
             database: usersdb
-            uri: mongodb+srv://pablovpmadrid:Marx1230@cluster0.q8xteea.mongodb.net/test
+            uri: mongodb+srv://pablovpmadrid:Marx1230@cluster0.q8xteea.mongodb.net/?retryWrites=true&w=majority
             auto-index-creation: true
-            replica-set-name: atlas-qbure6-shard-0
 springdoc:
     swagger-ui:
         path: /swagger-ui.html
